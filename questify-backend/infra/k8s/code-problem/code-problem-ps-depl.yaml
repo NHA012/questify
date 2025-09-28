@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: code-problem-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: code-problem-postgres
+  template:
+    metadata:
+      labels:
+        app: code-problem-postgres
+    spec:
+      containers:
+        - name: code-problem-postgres
+          image: 'postgres:17'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '200m'
+            limits:
+              memory: '768Mi'
+              cpu: '750m'
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - secretRef:
+                name: code-problem-postgres-secret
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: code-problem-postgresdata
+            - mountPath: /docker-entrypoint-initdb.d
+              name: init-script
+      volumes:
+        - name: code-problem-postgresdata
+          persistentVolumeClaim:
+            claimName: code-problem-postgres-volume-claim
+        - name: init-script
+          configMap:
+            name: code-problem-postgres-init
+            defaultMode: 0777
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: code-problem-postgres-srv
+spec:
+  selector:
+    app: code-problem-postgres
+  ports:
+    - name: db
+      protocol: TCP
+      port: 5432
+      targetPort: 5432

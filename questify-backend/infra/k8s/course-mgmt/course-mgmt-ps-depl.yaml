@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: course-mgmt-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: course-mgmt-postgres
+  template:
+    metadata:
+      labels:
+        app: course-mgmt-postgres
+    spec:
+      containers:
+        - name: course-mgmt-postgres
+          image: 'postgres:17'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '200m'
+            limits:
+              memory: '512Mi'
+              cpu: '500m'
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - secretRef:
+                name: course-mgmt-postgres-secret
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: course-mgmt-postgresdata
+            - mountPath: /docker-entrypoint-initdb.d
+              name: init-script
+      volumes:
+        - name: course-mgmt-postgresdata
+          persistentVolumeClaim:
+            claimName: course-mgmt-postgres-volume-claim
+        - name: init-script
+          configMap:
+            name: course-mgmt-postgres-init
+            defaultMode: 0777
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: course-mgmt-postgres-srv
+spec:
+  selector:
+    app: course-mgmt-postgres
+  ports:
+    - name: db
+      protocol: TCP
+      port: 5432
+      targetPort: 5432

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: course-learning-postgres-secret
+  labels:
+    app: course-learning-postgres
+type: Opaque
+stringData:
+  POSTGRES_DB: course_learning_ps_db
+  POSTGRES_USER: course_learning_ps_user
+  POSTGRES_PASSWORD: CourseLearningSecurePassword

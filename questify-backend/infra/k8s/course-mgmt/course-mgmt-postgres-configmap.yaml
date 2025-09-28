@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: course-mgmt-postgres-secret
+  labels:
+    app: course-mgmt-postgres
+type: Opaque
+stringData:
+  POSTGRES_DB: course_mgmt_ps_db
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: CourseMgmtSecurePassword
