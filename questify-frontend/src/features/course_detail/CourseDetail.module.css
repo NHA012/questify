@@ -1,0 +1,41 @@
+.courseDetail {
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 10% 50px;
+}
+
+@media (max-width: 1600px) {
+  .courseDetail {
+    padding: 20px 5% 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .courseDetail {
+    padding: 20px 3% 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .courseDetail {
+    padding: 20px 20px 20px;
+  }
+}
+
+.mainContent {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  justify-content: start;
+  width: 872px;
+  gap: 40px;
+}
+
+@media (max-width: 991px) {
+  .mainContent {
+    max-width: 100%;
+  }
+}

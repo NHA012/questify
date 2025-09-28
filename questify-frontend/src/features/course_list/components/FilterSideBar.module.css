@@ -1,0 +1,261 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.filterSection {
+  width: 100%;
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e9eaf0;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  color: #1d2026;
+  text-transform: uppercase;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  margin: 0;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1d2026;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.toggleButton.expanded {
+  transform: rotate(180deg);
+}
+
+.sectionContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categoryList,
+.ratingList,
+.levelList,
+.durationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkboxContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ced1d9;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.checkboxChecked {
+  background-color: #00adb5;
+  border-color: #00adb5;
+}
+
+.checkboxHighlighted {
+  background-color: #00adb5;
+  border-color: #00adb5;
+}
+
+.checkboxLabel {
+  color: #4e5566;
+  letter-spacing: -0.14px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.labelHighlighted {
+  color: #00adb5;
+  font-weight: 500;
+}
+
+.count {
+  color: #8c94a3;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.countHighlighted {
+  color: #4e5566;
+  font-weight: 500;
+}
+
+.ratingLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.priceFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.priceSlider {
+  position: relative;
+  height: 6px;
+  background-color: #ffddd1;
+  border-radius: 3px;
+}
+
+.priceSlider {
+  position: relative;
+  height: 6px;
+  background-color: #ffddd1;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.sliderFill {
+  position: absolute;
+  height: 100%;
+  background-color: #00adb5;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+  z-index: 2;
+  margin: 0;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00adb5;
+  border: 2px solid white;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(29, 32, 38, 0.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00adb5;
+  border: 2px solid white;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(29, 32, 38, 0.1);
+}
+
+/* Ensure both sliders work together */
+.sliderMin,
+.sliderMax {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.sliderMin::-webkit-slider-thumb,
+.sliderMax::-webkit-slider-thumb,
+.sliderMin::-moz-range-thumb,
+.sliderMax::-moz-range-thumb {
+  pointer-events: auto;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 8px;
+}
+
+.priceInput {
+  position: relative;
+  flex: 1;
+  border: 1px solid #e9eaf0;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.currencySymbol {
+  color: #1d2026;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 4px;
+}
+
+.priceInput input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #8c94a3;
+}
+
+.priceOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

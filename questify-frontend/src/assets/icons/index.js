@@ -1,0 +1,27 @@
+import assetMapping from '../firebase/assetMapping.json';
+
+export const cartIcon = assetMapping['icons/cart.svg'];
+export const facebookIcon = assetMapping['icons/facebook.svg'];
+export const favoritesIcon = assetMapping['icons/favorites.svg'];
+export const instagramIcon = assetMapping['icons/instagram.svg'];
+export const linkedinIcon = assetMapping['icons/linkedin.svg'];
+export const logoIcon = assetMapping['icons/logo.svg'];
+export const notificationIcon = assetMapping['icons/notification.svg'];
+export const searchIcon = assetMapping['icons/search.svg'];
+export const twitterIcon = assetMapping['icons/twitter.svg'];
+export const youtubeIcon = assetMapping['icons/youtube.svg'];
+export const sectionsIcon = assetMapping['icons/sections.svg'];
+export const lecturesIcon = assetMapping['icons/lectures.svg'];
+export const timeIcon = assetMapping['icons/time.svg'];
+export const backButtonIcon = assetMapping['icons/back_button.svg'];
+export const cupIcon = assetMapping['icons/cup.svg'];
+export const starIcon = assetMapping['icons/star.svg'];
+export const studentsIcon = assetMapping['icons/students.svg'];
+export const arrowLeftIcon = assetMapping['icons/arrow_left.svg'];
+export const arrowRightIcon = assetMapping['icons/arrow_right.svg'];
+export const arrowLeftPaginationIcon = assetMapping['icons/arrow_left_pagination.svg'];
+export const arrowRightPaginationIcon = assetMapping['icons/arrow_right_pagination.svg'];
+export const chartBarIcon = assetMapping['icons/ChartBar.svg'];
+export const creditCardIcon = assetMapping['icons/CreditCard.svg'];
+export const gearIcon = assetMapping['icons/Gear.svg'];
+export const stackIcon = assetMapping['icons/Stack.svg'];

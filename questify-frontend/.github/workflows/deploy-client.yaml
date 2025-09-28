@@ -1,0 +1,38 @@
+name: deploy-client
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create .env.local file
+        run: |
+          echo "NEXT_PUBLIC_FIREBASE_API_KEY=${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}" > .env.local
+          echo "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ secrets.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}" >> .env.local
+          echo "NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}" >> .env.local
+          echo "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${{ secrets.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}" >> .env.local
+          echo "NEXT_PUBLIC_FIREBASE_MESSAGE_SENDER_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_MESSAGE_SENDER_ID }}" >> .env.local
+          echo "NEXT_PUBLIC_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}" >> .env.local
+          echo "NEXT_PUBLIC_IMG_FIREBASE_API_KEY=${{ secrets.NEXT_PUBLIC_IMG_FIREBASE_API_KEY }}" >> .env.local
+          echo "NEXT_PUBLIC_IMG_FIREBASE_AUTH_DOMAIN=${{ secrets.NEXT_PUBLIC_IMG_FIREBASE_AUTH_DOMAIN }}" >> .env.local
+          echo "NEXT_PUBLIC_IMG_FIREBASE_PROJECT_ID=${{ secrets.NEXT_PUBLIC_IMG_FIREBASE_PROJECT_ID }}" >> .env.local
+          echo "NEXT_PUBLIC_IMG_FIREBASE_STORAGE_BUCKET=${{ secrets.NEXT_PUBLIC_IMG_FIREBASE_STORAGE_BUCKET }}" >> .env.local
+          echo "NEXT_PUBLIC_IMG_FIREBASE_MESSAGE_SENDER_ID=${{ secrets.NEXT_PUBLIC_IMG_FIREBASE_MESSAGE_SENDER_ID }}" >> .env.local
+          echo "NEXT_PUBLIC_IMG_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_IMG_FIREBASE_APP_ID }}" >> .env.local
+          cat .env.local # For debugging - you can remove this after things work
+      - run: docker build -t questify/client .
+      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      - run: docker push questify/client
+      - uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save questify
+      - run: kubectl rollout restart deployment client-depl

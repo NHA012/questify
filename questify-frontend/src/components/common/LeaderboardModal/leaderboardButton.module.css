@@ -1,0 +1,27 @@
+.buttonContainer {
+  position: absolute;
+  top: 30px;
+  left: 140px;
+  z-index: 1000;
+}
+
+.leaderboardButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderboardButton:hover {
+  transform: scale(1.1);
+}
+
+.buttonImage {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+}

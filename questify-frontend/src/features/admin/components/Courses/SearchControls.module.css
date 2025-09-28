@@ -1,0 +1,427 @@
+.topActions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  gap: 24px;
+}
+
+.action {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+
+@media (width <= 991px) {
+  .action {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* Filter Controls */
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid #ced1d9;
+  background-color: #fff;
+  border-radius: 30px;
+  min-width: 150px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  justify-content: center;
+}
+
+.filterButton.active {
+  border-color: #00adb5;
+  background-color: rgba(0, 173, 181, 0.08);
+}
+
+.filterText {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d2026;
+}
+
+.filterCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #00adb5;
+  color: white;
+  border-radius: 20%;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filterDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 100;
+  animation: fadeIn 0.2s ease;
+}
+
+.filterControls {
+  position: relative;
+  display: flex;
+  gap: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.searchBox {
+  position: relative;
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  width: 457px;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 30px;
+}
+
+.searchBox:focus-within {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 2px rgba(0, 173, 181, 0.1);
+}
+
+@media (width <= 991px) {
+  .searchBox {
+    width: 100%;
+  }
+}
+
+.searchInput {
+  color: #1d2026;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: #8c94a3;
+}
+
+.clearSearch {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.clearSearch:hover {
+  opacity: 1;
+}
+
+/* Sort Controls */
+.sortControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+@media (width <= 991px) {
+  .sortControls {
+    width: 100%;
+  }
+}
+
+.sortLabel {
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+  white-space: nowrap;
+}
+
+.sortWrapper {
+  position: relative;
+}
+
+.sortButton {
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  width: 200px;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 30px;
+}
+
+.sortButton:hover {
+  border-color: #c9f1ff;
+}
+
+.sortButton.active {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.2);
+}
+
+.sortButton svg {
+  transition: transform 0.2s ease;
+}
+
+.sortDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sortOption {
+  width: 100%;
+  padding: 12px 18px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  color: #4e5566;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sortOption:hover {
+  background-color: #f5f7fa;
+}
+
+.sortOption.selected {
+  color: #00adb5;
+  background-color: #f0f9fb;
+  font-weight: 500;
+}
+
+/* Status styling for sort options */
+.statusOption {
+  position: relative;
+}
+
+.statusIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.statusIndicator[data-status='pending'] {
+  background-color: #ff8a00;
+}
+
+.statusIndicator[data-status='approved'] {
+  background-color: #00a651;
+}
+
+.statusIndicator[data-status='rejected'] {
+  background-color: #ff3b30;
+}
+
+/* Search Info */
+.secondLine {
+  letter-spacing: -0.14px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  box-shadow: inset 0 -1px #e9eaf0;
+}
+
+.resultsfindforuiuxdesign {
+  color: #1d2026;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.resultsNumber {
+  font-weight: 600;
+}
+
+.resultsText {
+  font-weight: 400;
+  line-height: 22px;
+  color: #4e5566;
+}
+
+@media (width <= 991px) {
+  .secondLine {
+    max-width: 100%;
+  }
+}
+
+/* Status Filter */
+.statusFilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+@media (width <= 991px) {
+  .statusFilter {
+    width: 100%;
+  }
+}
+
+.statusLabel {
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+  white-space: nowrap;
+}
+
+.statusWrapper {
+  position: relative;
+}
+
+.statusButton {
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  width: 150px;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 30px;
+}
+
+.statusButton:hover {
+  border-color: #c9f1ff;
+}
+
+.statusButton.active {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.2);
+}
+
+.statusButton svg {
+  transition: transform 0.2s ease;
+}
+
+.statusDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+.statusOption {
+  width: 100%;
+  padding: 12px 18px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  color: #4e5566;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.statusOption:hover {
+  background-color: #f5f7fa;
+}
+
+.statusOption.selected {
+  color: #00adb5;
+  background-color: #f0f9fb;
+  font-weight: 500;
+}

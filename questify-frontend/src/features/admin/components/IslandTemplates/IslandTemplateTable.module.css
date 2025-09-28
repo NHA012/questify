@@ -1,0 +1,233 @@
+/* IslandTemplateTable.module.css */
+.tableContainer {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  overflow-x: auto; /* Add horizontal scroll for smaller screens */
+}
+
+.tableHeader {
+  width: 100%;
+  display: flex;
+  margin-top: -10px;
+}
+
+.headerRow {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* Ensure fixed layout */
+}
+
+.idHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.nameHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.createdAtHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.imageHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.actionsHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.divider {
+  background-color: #eee;
+  width: 100%;
+  height: 1px;
+  padding: 0px;
+}
+
+.tableBody {
+  background-color: #eee;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+
+.tableRow {
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.rowContent {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* Ensure fixed layout */
+}
+
+.idCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  font-family: Poppins;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.nameCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  font-family: Poppins;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.createdAtCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  font-family: Poppins;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.imageCell {
+  display: table-cell;
+  text-align: center;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.templateImage {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.actionsCell {
+  display: table-cell;
+  text-align: center;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #e6f7f8;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 4px;
+}
+
+.actionButton:hover {
+  background-color: #00adb5;
+}
+
+.actionButton:hover svg path {
+  stroke: #ffffff;
+}
+
+.noResults {
+  padding: 20px;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .tableContainer {
+    overflow-x: auto;
+  }
+
+  /* Keep the table structure on smaller screens */
+  .headerRow,
+  .rowContent {
+    min-width: 1050px; /* Ensure minimum width equal to sum of all columns */
+  }
+}
+
+.idHeader,
+.idCell {
+  width: 300px; /* Slightly wider to accommodate full UUID */
+}
+
+.nameHeader,
+.nameCell {
+  width: 250px; /* Enough for longer template names */
+}
+
+.createdAtHeader,
+.createdAtCell {
+  width: 180px; /* Accommodate full date format */
+}
+
+.imageHeader,
+.imageCell {
+  width: 80px; /* Slightly wider to ensure centered image */
+  text-align: center;
+  justify-content: center;
+}
+
+.imageCell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.actionsHeader,
+.actionsCell {
+  width: 120px; /* Slightly wider to accommodate both view and delete buttons */
+}

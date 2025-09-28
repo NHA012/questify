@@ -1,0 +1,53 @@
+.div {
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .div {
+    gap: 40px;
+    width: 100%;
+  }
+}
+
+@media (width<=640px) {
+  .div {
+    gap: 20px;
+    padding: 8px 16px;
+  }
+}
+
+.div2 {
+  color: #1d2026;
+  letter-spacing: -0.14px;
+  gap: 8px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.div3 {
+  gap: 12px;
+  display: flex;
+}
+
+.div4 {
+  color: #00adb5;
+  letter-spacing: -0.056px;
+  text-transform: capitalize;
+  background-color: #c9f1ff;
+  border-radius: 20px;
+  gap: 8px;
+  padding: 0 16px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  border: none;
+  cursor: pointer;
+}
