@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: code-problem-postgres-volume
+  labels:
+    type: local
+    app: code-problem-postgres
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: default
+    name: code-problem-postgres-volume-claim
+  hostPath:
+    path: /data/code-problem-postgresql-fresh

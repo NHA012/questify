@@ -1,0 +1,45 @@
+import defineCourseAssociations from './course.associations';
+import defineFeedbackAssociations from './feedback.associations';
+import defineIslandAssociations from './island.associations';
+import defineReviewAssociations from './review.associations';
+import defineRewardAssociations from './reward.associations';
+import defineSlideAssociations from './slide.associations';
+import defineStudentRewardAssociations from './student-reward.associations';
+import defineUserAssociations from './user.associations';
+import defineLevelAssociations from './level.associations';
+import definePrerequisiteIslandAssociations from './prerequisite-island.associations';
+import defineAttemptAssociations from './attempt.associations';
+import defineChallengeAssociation from './challenge.associations';
+import defineCourseItemTemplateAssociations from './course-item-template.associations';
+import defineHintAssociations from './hint.associations';
+import defineInventoryAssociations from './inventory.associations';
+import defineInventoryItemTemplateAssociations from './inventory-item-template.associations';
+import defineItemTemplateAssociations from './item-template.associations';
+import defineUserCourseAssociations from './user-course.associations';
+import defineUserIslandAssociations from './user-island.associations';
+import defineUserLevelAssociations from './user-level.associations';
+
+export const defineAssociations = () => {
+  defineAttemptAssociations();
+  defineChallengeAssociation();
+  defineCourseItemTemplateAssociations();
+  defineCourseAssociations();
+  defineFeedbackAssociations();
+  defineHintAssociations();
+  defineInventoryItemTemplateAssociations();
+  defineInventoryAssociations();
+  defineIslandAssociations();
+  defineItemTemplateAssociations();
+  defineLevelAssociations();
+  definePrerequisiteIslandAssociations();
+  defineReviewAssociations();
+  defineRewardAssociations();
+  defineSlideAssociations();
+  defineStudentRewardAssociations();
+  defineUserCourseAssociations();
+  defineUserIslandAssociations();
+  defineUserLevelAssociations();
+  defineUserAssociations();
+};
+
+defineAssociations();

@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: course-mgmt-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: course-mgmt
+  template:
+    metadata:
+      labels:
+        app: course-mgmt
+    spec:
+      containers:
+        - name: course-mgmt
+          image: questify/course-mgmt
+          resources:
+            requests:
+              memory: '512Mi'
+              cpu: '200m'
+            limits:
+              memory: '1Gi'
+              cpu: '500m'
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: 'http://nats-srv:4222'
+            - name: NATS_CLUSTER_ID
+              value: questify
+            - name: NODE_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: NODE_ENV
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: course-mgmt-postgres-secret
+                  key: POSTGRES_DB
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: course-mgmt-postgres-secret
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: course-mgmt-postgres-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_URI
+              value: 'postgresql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@course-mgmt-postgres-srv:5432/$(POSTGRES_DB)'
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+            - name: NEXT_PUBLIC_IMG_FIREBASE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: NEXT_PUBLIC_IMG_FIREBASE_API_KEY
+            - name: NEXT_PUBLIC_IMG_FIREBASE_STORAGE_BUCKET
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: NEXT_PUBLIC_IMG_FIREBASE_STORAGE_BUCKET
+            - name: NEXT_PUBLIC_IMG_FIREBASE_AUTH_DOMAIN
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: NEXT_PUBLIC_IMG_FIREBASE_AUTH_DOMAIN
+                  optional: true
+            - name: NEXT_PUBLIC_IMG_FIREBASE_PROJECT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: NEXT_PUBLIC_IMG_FIREBASE_PROJECT_ID
+                  optional: true
+            - name: NEXT_PUBLIC_IMG_FIREBASE_MESSAGE_SENDER_ID
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: NEXT_PUBLIC_IMG_FIREBASE_MESSAGE_SENDER_ID
+                  optional: true
+            - name: NEXT_PUBLIC_IMG_FIREBASE_APP_ID
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: NEXT_PUBLIC_IMG_FIREBASE_APP_ID
+                  optional: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: course-mgmt-srv
+spec:
+  selector:
+    app: course-mgmt
+  ports:
+    - name: course-mgmt
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+#

@@ -1,0 +1,46 @@
+{
+  "name": "questify",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "npx prettier . --check",
+    "format": "npx prettier . --write",
+    "format:path": "prettier --write",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test:load": "k6 run ./test/performance/load_test.js",
+    "test:stress": "k6 run ./test/performance/stress_test.js",
+    "test:throughput": "k6 run ./test/performance/throughput_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DACN-DATN/questify-backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DACN-DATN/questify-backend/issues"
+  },
+  "homepage": "https://github.com/DACN-DATN/questify-backend#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.27.0"
+  },
+  "dependencies": {
+    "@datn242/questify-common": "^3.0.22",
+    "axios": "^1.9.0",
+    "pg": "^8.15.6",
+    "sequelize": "^6.37.7",
+    "uuid": "^11.1.0"
+  }
+}

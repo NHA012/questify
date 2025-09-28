@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: admin
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      containers:
+        - name: admin
+          image: questify/admin
+          resources:
+            requests:
+              memory: '128Mi'
+              cpu: '150m'
+            limits:
+              memory: '384Mi'
+              cpu: '350m'
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: 'http://nats-srv:4222'
+            - name: NATS_CLUSTER_ID
+              value: questify
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+            - name: NODE_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: NODE_ENV
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: admin-postgres-secret
+                  key: POSTGRES_DB
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: admin-postgres-secret
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: admin-postgres-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_URI
+              value: 'postgresql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@admin-postgres-srv:5432/$(POSTGRES_DB)'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin-srv
+spec:
+  selector:
+    app: admin
+  ports:
+    - name: admin
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
