@@ -1,0 +1,92 @@
+{
+  "name": "questify",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:docker": "next build --no-lint",
+    "start": "next start",
+    "lint": "next lint",
+    "_comment": "List of islands",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "format:path": "prettier --write",
+    "migrate-assets": "node migrateAssets.js"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@datn242/questify-common": "^3.0.20",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "@uiw/codemirror-theme-vscode": "^4.23.6",
+    "@uiw/react-codemirror": "^4.23.6",
+    "assert": "^2.1.0",
+    "axios": "^1.8.1",
+    "dompurify": "^3.2.5",
+    "firebase": "^11.6.0",
+    "highlight.js": "^11.11.1",
+    "marked": "^15.0.7",
+    "next": "15.2.2",
+    "react": "^18.0.0",
+    "react-confetti": "^6.1.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.0.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^5.4.0",
+    "react-markdown": "^10.1.0",
+    "react-split": "^2.0.14",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-toastify": "^10.0.6",
+    "react-youtube": "^10.1.0",
+    "recoil": "^0.7.7",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1",
+    "typescript": "^4.9.5",
+    "uuid": "^11.1.0",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/runtime": "^7.26.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.1",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "lucide-react": "^0.468.0",
+    "metro-react-native-babel-preset": "^0.77.0",
+    "next": "^15.2.2",
+    "postcss": "^8.4.49",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.16",
+    "ts-node": "^10.9.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

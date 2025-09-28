@@ -1,0 +1,419 @@
+.navbar1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  background-color: #1a1a1a;
+  color: white;
+  height: 5vh;
+}
+
+.navbar2 {
+  padding: 16px 24px 10px 24px;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar__linksContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 24px;
+}
+
+.navbar__linksCurrent,
+.navbar__links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.navbar__links-current:hover {
+  color: #8c94a3;
+}
+
+.navbar__links {
+  color: #8c94a3;
+}
+
+.navbar__links:hover {
+  color: white;
+}
+
+.navbar__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar__icons {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.notification,
+.favorites,
+.cart {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.notification:hover,
+.favorites:hover,
+.cart:hover {
+  opacity: 0.5;
+}
+
+.profilePic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.reviewButton {
+  background-color: orange;
+  color: white;
+}
+
+.navbar__select {
+  background-color: transparent;
+  color: #a1a5b3;
+  border: none;
+  margin: 0;
+  height: 100%;
+  max-width: 6vw;
+}
+
+.navbar__brand {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.search__container {
+  display: flex;
+  height: 100%;
+  margin-left: 50px;
+  width: 100%;
+}
+
+.navbar__searchContainer {
+  width: 30vw;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  color: #4e5566;
+  border: 1px solid #e9eaf0;
+  padding: 0 10px;
+  border-radius: 30px;
+}
+
+.navbar__searchInput {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #a1a5b3;
+}
+
+.courseDetail {
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.courseDetail__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courseDetail__part1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.courseDetail__backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.courseDetail__backButton:hover {
+  opacity: 0.5;
+}
+
+.courseDetail__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.courseDetail__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.courseDetail__meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.courseDetail__metaItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.courseDetail__part2 {
+  display: flex;
+  align-items: center;
+}
+
+.courseDetail__reviewButton {
+  background-color: white;
+  color: #ff6636;
+  border: 1px solid #ff6636;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.courseDetail__reviewButton:hover {
+  background-color: #ff6636;
+  color: white;
+}
+
+.ctaButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 30px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 120px;
+  height: 48px;
+}
+
+.signInButton,
+.signUpButton {
+  flex-basis: 120px;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 56px;
+  word-wrap: break-word;
+}
+
+.signInButton {
+  background: #00adb5;
+}
+
+.signInButton:hover {
+  background: #198b91;
+}
+
+.signUpButton {
+  background: #c9f1ff;
+  margin-right: 16px;
+}
+
+.signUpButton:hover {
+  background: #005c6d;
+}
+
+.signInButtonText,
+.signUpButtonText {
+  color: white;
+}
+
+.signUpButtonText {
+  color: #00adb5;
+}
+
+/* Avatar styles */
+.avatarContainer {
+  position: relative;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.avatarContainer:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.avatarImage {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: 100%;
+}
+
+.avatarFallback {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #1e40af;
+  color: white;
+  font-weight: 500;
+}
+
+.avatarImageContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  font-weight: 500;
+}
+
+/* Dropdown styles */
+.dropdownContent {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  /* Change from left: 0 to right: 0 */
+  z-index: 950;
+  min-width: 224px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 4px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.username,
+.level {
+  font-weight: 500;
+}
+
+.separator {
+  margin: 4px -4px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menuItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menuItemIcon {
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+}
+
+.destructive {
+  color: #ef4444;
+}
+
+/* Animation classes */
+.fadeIn {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.levelInfoContainer {
+  margin: 8px 0;
+  width: 100%;
+}
+
+.levelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.levelText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.expText {
+  font-size: 12px;
+  color: #666;
+}
+
+.progressBarContainer {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: #00adb5;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}

@@ -1,0 +1,131 @@
+.levelItem {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nodeContainer {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.node {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Styling for completed node (previously passed) */
+.completedNode {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  border: 2px solid #eab308;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.completedNode:hover {
+  transform: scale(1.25);
+}
+
+/* Styling for in progress node (previously current) */
+.inProgressNode {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fde047;
+  border: 2px solid #15803d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.inProgressNode:hover {
+  transform: scale(1.25);
+}
+
+/* Styling for failed node */
+.failNode {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: 2px solid #ef4444; /* Red border for failed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.failNode:hover {
+  transform: scale(1.25);
+}
+
+/* Styling for locked node (previously not passed) */
+.lockedNode {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: 2px solid #6b7280;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.lockedNode:hover {
+  transform: scale(1.25);
+}
+
+.levelBanner {
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: 8px;
+}
+
+.nodeIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.starIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.playButton:hover {
+  transform: scale(1.05);
+}
+
+.scoreButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.scoreButton:hover {
+  transform: scale(1.05);
+}
+
+.modalWrapper {
+  position: fixed;
+  z-index: 900;
+  transform: translate3d(0, 0, 0);
+}

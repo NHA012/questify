@@ -1,0 +1,185 @@
+.courseRating {
+  display: flex;
+  max-width: 872px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.courseTitle {
+  color: var(--Gray-900, #1d2026);
+  letter-spacing: -0.24px;
+  width: 100%;
+  font:
+    600 24px/1 Inter,
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .courseTitle {
+    max-width: 100%;
+  }
+}
+
+.ratingContainer {
+  display: flex;
+  margin-top: 20px;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .ratingContainer {
+    max-width: 100%;
+  }
+}
+
+.totalRating {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Gray-100, #e9eaf0);
+  background-color: var(--Gray-White, #fff);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 31px 0;
+}
+
+.ratingScore {
+  color: var(--Gray-900, #1d2026);
+  text-align: center;
+  letter-spacing: -0.96px;
+  font:
+    600 48px/1 Inter,
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .ratingScore {
+    font-size: 40px;
+  }
+}
+
+.ratingInfo {
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.starContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  justify-content: flex-start;
+}
+
+.star {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.starImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.ratingLabel {
+  color: var(--Gray-900, #1d2026);
+  text-align: center;
+  letter-spacing: -0.14px;
+  margin-top: 12px;
+  font:
+    500 14px/1 Inter,
+    sans-serif;
+}
+
+.ratingBreakdown {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  padding: 0px 20px;
+  gap: 7px;
+}
+
+@media (max-width: 991px) {
+  .ratingBreakdown {
+    max-width: 100%;
+  }
+}
+.ratingProgress {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.starRating {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+}
+
+.ratingText {
+  color: var(--Gray-700, #4e5566);
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  margin-left: 16px;
+}
+
+.progressBar {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.progressFull {
+  background-color: var(--Gray-100, #fff2e5);
+  height: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progressCompleted {
+  background-color: var(--primary, #82fdf3);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.percentageText {
+  color: var(--Gray-700, #4e5566);
+  font-size: 14px;
+  font-weight: 500;
+  width: 40px;
+  text-align: right;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

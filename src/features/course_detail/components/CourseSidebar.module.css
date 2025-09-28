@@ -1,0 +1,315 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  gap: 24px;
+  border: 1px solid #e9eaf0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    padding: 16px 0;
+  }
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+@media (max-width: 991px) {
+  .priceSection {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .priceSection {
+    padding: 0 16px;
+  }
+}
+
+.priceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.priceAmounts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currentPrice {
+  color: #1d2026;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.originalPrice {
+  color: #8c94a3;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: line-through;
+}
+
+.discountBadge {
+  padding: 8px 12px;
+  color: #00adb5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+  background-color: #c9f1ff;
+}
+
+.offerTimer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e34444;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e9eaf0;
+}
+
+.courseInfo {
+  padding: 0 24px;
+}
+
+@media (max-width: 991px) {
+  .courseInfo {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .courseInfo {
+    padding: 0 16px;
+  }
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.labelText {
+  color: #1d2026;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+}
+
+.infoValue {
+  color: #6e7485;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+@media (max-width: 991px) {
+  .actionButtons {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .actionButtons {
+    padding: 0 16px;
+  }
+}
+
+.primaryButton {
+  padding: 0 32px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -0.18px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #00adb5;
+  border-radius: 20px;
+}
+
+.secondaryButton {
+  padding: 0 32px;
+  color: #00adb5;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -0.18px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #c9f1ff;
+  border-radius: 20px;
+}
+
+.featuresSection {
+  padding: 0 24px;
+}
+
+@media (max-width: 991px) {
+  .featuresSection {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .featuresSection {
+    padding: 0 16px;
+  }
+}
+
+.featuresTitle {
+  color: #1d2026;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.featureText {
+  color: #4e5566;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+}
+
+.shareSection {
+  padding: 0 24px;
+}
+
+@media (max-width: 991px) {
+  .shareSection {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .shareSection {
+    padding: 0 16px;
+  }
+}
+
+.shareTitle {
+  color: #1d2026;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 18px;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 8px;
+  border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+  .shareButtons {
+    flex-wrap: wrap;
+  }
+}
+
+.shareButtonCopyLink {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+  .shareButtonCopyLink {
+    flex: 1;
+    min-width: 80px;
+    justify-content: center;
+  }
+}
+
+.buttonText {
+  color: #4e5566;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+  .shareButton {
+    flex: 1;
+    min-width: 80px;
+    justify-content: center;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

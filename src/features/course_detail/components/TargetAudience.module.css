@@ -1,0 +1,103 @@
+.courseSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .courseSection {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
+.sectionTitle {
+  color: #1d2026;
+  letter-spacing: -0.24px;
+  font:
+    600 24px/32px 'Inter',
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .sectionTitle {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.targetList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .targetList {
+    gap: 10px;
+  }
+}
+
+.targetItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .targetItem {
+    gap: 6px;
+  }
+}
+
+.targetText {
+  color: #4e5566;
+  letter-spacing: -0.14px;
+  flex: 1;
+  font:
+    400 14px/22px 'Inter',
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .targetText {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .targetText {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

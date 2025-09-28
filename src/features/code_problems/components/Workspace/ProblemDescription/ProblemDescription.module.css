@@ -1,0 +1,72 @@
+/* ProblemDescription.module.css */
+.markdownContent {
+  line-height: 1.6;
+}
+
+/* We need to use :global for each element since we're using CSS Modules */
+.markdownContent :global(h1),
+.markdownContent :global(h2),
+.markdownContent :global(h3),
+.markdownContent :global(h4),
+.markdownContent :global(h5),
+.markdownContent :global(h6) {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.markdownContent :global(h1) {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.3em;
+}
+
+.markdownContent :global(h2) {
+  font-size: 1.25rem;
+  padding-bottom: 0.3em;
+  color: #58a6ff; /* Blue color for headings like "Example 1" */
+}
+
+.markdownContent :global(p) {
+  margin-bottom: 12px;
+}
+
+.markdownContent :global(ul),
+.markdownContent :global(ol) {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.markdownContent :global(li) {
+  margin-bottom: 4px;
+}
+
+.markdownContent :global(code) {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  background-color: rgba(110, 118, 129, 0.4);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+}
+
+.markdownContent :global(pre) {
+  background-color: #1e1e1e;
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto;
+  margin-bottom: 16px;
+}
+
+.markdownContent :global(pre code) {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdownContent :global(strong) {
+  font-weight: 600;
+  color: #ff7b72; /* Red for emphasis - good for Input/Output/Explanation */
+}
+
+.markdownContent :global(em) {
+  font-style: italic;
+}

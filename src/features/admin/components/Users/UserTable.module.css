@@ -1,0 +1,224 @@
+.tableContainer {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  overflow-x: auto; /* Add horizontal scroll for smaller screens */
+}
+
+.tableHeader {
+  width: 100%;
+  display: flex;
+  margin-top: -10px;
+}
+
+.headerRow {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* Ensure fixed layout */
+}
+
+.idHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  width: 250px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.usernameHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  width: 200px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.emailHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  width: 250px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.roleHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  width: 150px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.statusHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  width: 150px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.actionsHeader {
+  display: table-cell;
+  text-align: center;
+  color: #b5b7c0;
+  width: 100px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.divider {
+  background-color: #eee;
+  width: 100%;
+  height: 1px;
+  padding: 0px;
+}
+
+.tableBody {
+  background-color: #eee;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+
+.tableRow {
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.rowContent {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* Ensure fixed layout */
+}
+
+.idCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  width: 250px;
+  font-family: Poppins;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.usernameCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  width: 200px;
+  font-family: Poppins;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.emailCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  width: 250px;
+  font-family: Poppins;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.roleCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  width: 150px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.statusCell {
+  display: table-cell;
+  text-align: center;
+  color: #292d32;
+  width: 150px;
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.actionsCell {
+  display: table-cell;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #e6f7f8;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 4px;
+}
+
+.actionButton:hover {
+  background-color: #00adb5;
+}
+
+.actionButton:hover svg path {
+  stroke: #ffffff;
+}
+
+.noResults {
+  padding: 20px;
+  text-align: center;
+  color: #b5b7c0;
+  font-family: Poppins;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .tableContainer {
+    overflow-x: auto;
+  }
+
+  /* Keep the table structure on smaller screens */
+  .headerRow,
+  .rowContent {
+    min-width: 1050px; /* Ensure minimum width equal to sum of all columns */
+  }
+}

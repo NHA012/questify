@@ -1,0 +1,77 @@
+.container {
+  background-color: rgba(225, 247, 227, 0.4);
+  display: flex;
+  max-width: 872px;
+  flex-direction: column;
+  color: var(--Gray-700, #4e5566);
+  letter-spacing: -0.14px;
+  justify-content: start;
+  padding: 40px;
+  font:
+    400 14px/22px Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.title {
+  color: var(--Gray-900, #1d2026);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.24px;
+}
+
+@media (max-width: 991px) {
+  .title {
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  margin-top: 20px;
+  align-items: start;
+  gap: 24px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .row {
+    max-width: 100%;
+  }
+}
+
+.checkboxItem {
+  display: flex;
+  min-width: 240px;
+  align-items: start;
+  gap: 8px;
+  justify-content: start;
+}
+
+.checkCircle {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z' fill='%2300ADB5' stroke='%2300ADB5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 12L11 15L16 9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+}
+
+.checkboxText {
+  width: 352px;
+}
+
+@media (max-width: 640px) {
+  .checkboxText {
+    width: calc(100% - 32px);
+  }
+}

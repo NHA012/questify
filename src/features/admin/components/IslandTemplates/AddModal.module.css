@@ -1,0 +1,331 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(29, 32, 38, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container Styles */
+.container {
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 653px;
+  padding: 0 5px 22px 0;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .container {
+    width: 100%;
+    max-width: 653px;
+  }
+}
+
+@media (width<=640px) {
+  .modalContainer {
+    max-width: 95%;
+    margin: 0 10px;
+  }
+  .container {
+    padding: 0;
+  }
+}
+
+/* Header Styles */
+.header {
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  width: 648px;
+  height: 54px;
+  padding: 16px 20px;
+  display: flex;
+  box-shadow: inset 0 -1px #e9eaf0;
+}
+
+@media (width<=991px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media (width<=640px) {
+  .header {
+    padding: 12px 16px;
+  }
+}
+
+.headerTitle {
+  color: #1d2026;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* Form Content Styles */
+.formContent {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 604px;
+  padding: 24px 22px;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .formContent {
+    width: 100%;
+  }
+}
+
+@media (width<=640px) {
+  .formContent {
+    padding: 16px;
+  }
+}
+
+/* Name Input Styles */
+.nameInputContainer {
+  flex-direction: column;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 16px;
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+
+.inputLabel {
+  color: #1d2026;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.inputWrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+
+@media (width<=640px) {
+  .inputWrapper {
+    width: 100%;
+  }
+}
+
+.textInput {
+  color: #8c94a3;
+  letter-spacing: -0.14px;
+  border: 1px solid var(--Gray-100, #e9eaf0);
+  background-color: #fff;
+  border-radius: 20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 9px 20px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+/* Image Upload Styles */
+.imageUploadContainer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 604px;
+  display: flex;
+}
+
+.imageLabel {
+  color: #1d2026;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.imageUploadContent {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 24px;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .imageUploadContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.imagePlaceholder {
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 52px;
+  display: flex;
+}
+
+@media (width<=640px) {
+  .imagePlaceholder {
+    padding: 12px 24px;
+  }
+}
+
+.guidelinesContainer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .guidelinesContainer {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.guidelines {
+  color: #6e7485;
+  letter-spacing: -0.14px;
+  width: 344px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (width<=640px) {
+  .guidelines {
+    width: 100%;
+  }
+}
+
+.boldText {
+  color: #1d2026;
+  font-weight: 400;
+}
+
+.uploadButton {
+  cursor: pointer;
+  background-color: #c9f1ff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  display: flex;
+  border: none;
+}
+
+.uploadButtonText {
+  color: #00adb5;
+  letter-spacing: -0.128px;
+  text-transform: capitalize;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+/* Action Buttons Styles */
+.actionButtonsContainer {
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .actionButtonsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.cancelButton {
+  color: #1d2026;
+  letter-spacing: -0.128px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  width: 102px;
+  height: 48px;
+  padding: 0 24px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 48px;
+  border: none;
+}
+
+@media (width<=991px) {
+  .cancelButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.saveButton {
+  color: #00adb5;
+  letter-spacing: -0.128px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #c9f1ff;
+  border-radius: 20px;
+  width: 180px;
+  height: 48px;
+  padding: 0 24px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 48px;
+  border: none;
+}
+
+@media (width<=991px) {
+  .saveButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}

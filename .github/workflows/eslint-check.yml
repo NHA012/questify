@@ -1,0 +1,35 @@
+name: ESLint Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  eslint-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run ESLint
+        run: |
+          echo "Running ESLint check..."
+          # Run ESLint to check for errors and warnings, and fail the workflow if there are any
+          npm run lint -- --max-warnings=0
+
+      - name: Provide instructions if check fails
+        if: ${{ failure() }}
+        run: |
+          echo "::error::❌ ESLint check failed! There are warnings or errors in the code."
+          echo "::error::Bro please fix the issues before pushing again."
+          exit 1

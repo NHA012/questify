@@ -1,0 +1,178 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  background-color: #f5f7fa;
+  padding: 1.5rem;
+  color: black;
+  margin: 0 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pageIndicator {
+  background-color: rgb(107, 114, 128);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.submitButton {
+  background-color: #00adb5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #198b91;
+}
+
+.divider {
+  border-color: rgb(209, 213, 219);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex: 1;
+}
+
+.standardContent {
+  text-align: center;
+  width: 100%;
+}
+
+.videoContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.pdfContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.pdfImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: relative !important;
+  height: auto !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.quizContent {
+  text-align: center;
+  width: 100%;
+}
+
+.questionText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.optionContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.optionLabel {
+  background-color: #00adb5;
+  padding: 0.25rem 0.5rem;
+  width: 8rem;
+  text-align: center;
+  border-radius: 0.375rem;
+  display: block;
+  color: white;
+}
+
+.resultCorrect {
+  color: rgb(34, 197, 94);
+}
+
+.resultIncorrect {
+  color: rgb(239, 68, 68);
+}
+
+.submitQuizButton {
+  background-color: #00adb5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.submitQuizButton:hover {
+  background-color: #198b91;
+}
+
+.disabledSubmit {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.backButtonContainer {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e0e0e0;
+  color: #00adb5;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.backButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}

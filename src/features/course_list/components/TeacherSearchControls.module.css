@@ -1,0 +1,366 @@
+.topActions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  gap: 24px;
+}
+
+.action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 16px; /* Maintain a minimum gap */
+}
+
+@media (width <= 1200px) {
+  .action {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+}
+
+@media (width <= 991px) {
+  .action {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+/* Search Box */
+.searchBox {
+  position: relative;
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  width: 500px;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 30px;
+  flex-shrink: 0;
+}
+
+.searchBox:focus-within {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 2px rgba(0, 173, 181, 0.1);
+}
+
+@media (width <= 991px) {
+  .searchBox {
+    width: 100%;
+  }
+}
+
+.searchInput {
+  color: #1d2026;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: #8c94a3;
+}
+
+.clearSearch {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.clearSearch:hover {
+  opacity: 1;
+}
+
+/* Sort Controls */
+.sortControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sortLabel {
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+  white-space: nowrap;
+}
+
+.sortWrapper {
+  position: relative;
+}
+
+.sortButton {
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  width: 180px;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 30px;
+}
+
+.sortButton:hover {
+  border-color: #c9f1ff;
+}
+
+.sortButton.active {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.2);
+}
+
+.sortButton svg {
+  transition: transform 0.2s ease;
+}
+
+.sortDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sortOption {
+  width: 100%;
+  padding: 12px 18px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  color: #4e5566;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sortOption:hover {
+  background-color: #f5f7fa;
+}
+
+.sortOption.selected {
+  color: #00adb5;
+  background-color: #f0f9fb;
+  font-weight: 500;
+}
+
+/* Category Controls - Similar to Sort Controls */
+.categoryControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.categoryLabel {
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+  white-space: nowrap;
+}
+
+.categoryWrapper {
+  position: relative;
+}
+
+.categoryButton {
+  border: 1px solid #e9eaf0;
+  background-color: #fff;
+  width: 180px;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4e5566;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 30px;
+}
+
+.categoryButton:hover {
+  border-color: #c9f1ff;
+}
+
+.categoryButton.active {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.2);
+}
+
+.categoryButton svg {
+  transition: transform 0.2s ease;
+}
+
+.categoryDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+.categoryOption {
+  width: 100%;
+  padding: 12px 18px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  color: #4e5566;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.categoryOption:hover {
+  background-color: #f5f7fa;
+}
+
+.categoryOption.selected {
+  color: #00adb5;
+  background-color: #f0f9fb;
+  font-weight: 500;
+}
+
+/* Create Course Button */
+.createCourseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  height: 48px;
+  padding: 0 24px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.createCourseButton:hover {
+  background-color: #198b91;
+}
+
+@media (width <= 1200px) {
+  .createCourseButton {
+    margin-left: 0;
+  }
+}
+
+/* Results Count */
+.filter2ndLne {
+  letter-spacing: -0.14px;
+  background-color: #fff;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  box-shadow: inset 0 -1px #e9eaf0;
+}
+
+.resultsfindforuiuxdesign {
+  color: #1d2026;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.resultsNumber {
+  font-weight: 600;
+}
+
+.resultsText {
+  font-weight: 400;
+  line-height: 22px;
+  color: #4e5566;
+}
+
+@media (width <= 991px) {
+  .filter2ndLne {
+    max-width: 100%;
+  }
+}

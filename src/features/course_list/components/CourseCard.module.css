@@ -1,0 +1,149 @@
+.courseCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 14px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  border-radius: 20px;
+  width: 312px;
+  height: 384px;
+  border: 1px solid #e9eaf0;
+}
+
+.courseCard:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: #d0d1d7;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 234px;
+  position: relative;
+  box-shadow: 0px -1px 0px #e9eaf0 inset;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.courseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.courseContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0 14px;
+  flex: 1; /* Take up available space */
+  min-height: 80px; /* Minimum height for content area */
+}
+
+.courseHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.categoryTag {
+  padding: 4px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 12px;
+}
+
+.price {
+  color: #00adb5;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.courseTitle {
+  width: 100%;
+  color: #1d2026;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  height: 40px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  width: 100%;
+  height: 0;
+  opacity: 0.7;
+  border: 1px solid #e9eaf0;
+  margin: 0;
+}
+
+.courseFooter {
+  width: 100%;
+  padding: 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ratingValue {
+  color: #4e5566;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.students {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.studentCount {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.count {
+  color: #4e5566;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.label {
+  color: #8c94a3;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+}

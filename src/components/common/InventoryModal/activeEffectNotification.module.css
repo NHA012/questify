@@ -1,0 +1,57 @@
+.activeEffectContainer {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 900;
+  animation: fadeIn 0.5s;
+}
+
+.activeEffectBadge {
+  display: flex;
+  align-items: center;
+  background-color: rgba(210, 180, 140, 0.9);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #b89268;
+}
+
+.activeEffectIcon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.activeEffectText {
+  display: flex;
+  flex-direction: column;
+}
+
+.activeEffectTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #8b4513;
+}
+
+.activeEffectDescription {
+  font-weight: 600;
+  font-size: 14px;
+  color: #8b4513;
+}
+
+.activeEffectHint {
+  font-size: 12px;
+  color: #5f4339;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

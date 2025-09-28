@@ -1,0 +1,45 @@
+.pageLayout {
+  display: flex;
+}
+
+.container {
+  flex: 1;
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.courseGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (width <= 991px) {
+  .courseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 640px) {
+  .courseGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,99 @@
+.levelModal {
+  padding: 16px;
+  background-color: #fed7aa;
+  border-radius: 8px;
+  border: 4px solid #57534e;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 360px;
+}
+
+.modalContent {
+  width: 100%;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modalTitle {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.modalDescription {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.statusCompleted {
+  background-color: #15803d;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.statusInProgress {
+  background-color: #fcd12a;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.statusLocked {
+  background-color: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.statusFail {
+  background-color: #6b7280;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.modalStatus {
+  margin-bottom: 0px;
+}
+
+.modalPoints {
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.buttonsContainer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contentTypeTag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.codeProblemType {
+  background-color: #3498db;
+  color: white;
+}
+
+.challengeType {
+  background-color: #e74c3c;
+  color: white;
+}

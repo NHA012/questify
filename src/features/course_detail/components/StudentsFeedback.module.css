@@ -1,0 +1,488 @@
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 872px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .feedbackContainer {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .feedbackContainer {
+    padding: 0 16px;
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.title {
+  color: #1d2026;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 22px;
+  }
+}
+
+.ratingSelect {
+  display: flex;
+  width: 200px;
+  height: 48px;
+  padding: 12px 16px 12px 18px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e9eaf0;
+  color: #4e5566;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  background-color: #fff;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .ratingSelect {
+    width: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ratingSelect {
+    width: 100%;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e9eaf0;
+}
+
+.loadMore {
+  width: 100%;
+  padding-top: 12px;
+}
+
+.loadMoreButton {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #00adb5;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.128px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+
+.loadMoreButton:hover {
+  background-color: white;
+}
+
+.review {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .review {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative; /* Added for Next.js Image */
+  flex-shrink: 0; /* Prevents shrinking in flex containers */
+}
+
+.avatarImg,
+.avatarImage {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: block; /* Eliminates white space below image */
+}
+
+@media (max-width: 640px) {
+  .avatar {
+    margin-bottom: 4px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.name {
+  color: #1d2026;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.dot {
+  color: #6e7485;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.time {
+  color: #6e7485;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.reviewText {
+  color: #4e5566;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+}
+
+@media (max-width: 640px) {
+  .reviewText {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  border-top: none;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  padding: 10px 16px;
+  color: #4e5566;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f7;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.toggleIcon {
+  width: 14px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+/* Review Form Styles */
+.reviewForm {
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box; /* Added to ensure padding is included in width */
+}
+
+.reviewForm h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #1d2026;
+  font-weight: 600;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+  width: 100%; /* Ensure full width */
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #1d2026;
+  font-size: 14px;
+}
+
+.ratingSelector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ratingSelector span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1d2026;
+}
+
+.commentInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e9eaf0;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+  min-height: 100px;
+  color: #4e5566;
+  box-sizing: border-box; /* Added to ensure padding is included in width */
+}
+
+.commentInput:focus {
+  outline: none;
+  border-color: #00adb5;
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.cancelButton,
+.submitButton {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid #e9eaf0;
+  color: #4e5566;
+}
+
+.cancelButton:hover {
+  background-color: #f5f5f7;
+}
+
+.submitButton {
+  background-color: #00adb5;
+  border: none;
+  color: white;
+}
+
+.submitButton:hover {
+  background-color: #008c93;
+}
+
+.submitButton:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.userReviewSection {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.userReviewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.userReviewInfo p {
+  margin: 0;
+  color: #4e5566;
+  font-size: 14px;
+}
+
+.writeReviewButton {
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.writeReviewButton:hover {
+  background-color: #008c93;
+}
+
+/* State Styles */
+.loadingIndicator {
+  text-align: center;
+  padding: 20px;
+  color: #6e7485;
+  font-style: italic;
+  width: 100%;
+}
+
+.noReviews {
+  text-align: center;
+  padding: 24px;
+  color: #6e7485;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box; /* Added to ensure padding is included in width */
+}
+
+/* Review Action Styles */
+.reviewActions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.editButton,
+.deleteButton {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editButton {
+  background-color: #f2f2f2;
+  border: 1px solid #e9eaf0;
+  color: #4e5566;
+}
+
+.editButton:hover {
+  background-color: #e9eaf0;
+}
+
+.deleteButton {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.deleteButton:hover {
+  background-color: #fecaca;
+}
+
+.errorMessage {
+  color: #b91c1c;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #fee2e2;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .reviewActions {
+    margin-top: 8px;
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .reviewHeader {
+    flex-wrap: wrap;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+    text-align: center;
+  }
+}

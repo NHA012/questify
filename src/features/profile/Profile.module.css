@@ -1,0 +1,365 @@
+.editProfile {
+  color: #fff;
+  cursor: pointer;
+  background-color: #00adb5;
+  border-radius: 20px;
+  margin-left: auto;
+  padding: 12px 24px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  align-self: center;
+}
+@media (width<=640px) {
+  .editProfile {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.lineDivider {
+  background-color: #00adb5;
+  height: 1px;
+  margin: 40px 0;
+}
+.contentSection {
+  gap: 25px;
+  display: flex;
+}
+@media (width<=991px) {
+  .contentSection {
+    flex-direction: column;
+  }
+}
+.achievementSidebar {
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  width: 420px;
+  padding: 20px;
+  height: fit-content;
+  border-radius: 20px;
+}
+@media (width<=991px) {
+  .achievementSidebar {
+    width: 100%;
+  }
+}
+.achievementTitle {
+  color: #1d2026;
+  margin-bottom: 30px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.achievementStats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.achievementStat {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+}
+.trophyContainer {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+}
+.trophyCard {
+  background-color: #fff;
+  border: 1px solid #e9eaf0;
+  border-radius: 62px;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 200px;
+  display: flex;
+}
+.mainContent {
+  flex: 1;
+}
+.tabs {
+  border-bottom: 1px solid #e9eaf0;
+  margin-bottom: 40px;
+  display: flex;
+}
+.tabactive,
+.tab {
+  color: #4e5566;
+  cursor: pointer;
+  text-align: center;
+  min-width: 200px;
+  padding: 20px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+
+.tabactive {
+  border-bottom-width: 3px;
+  border-bottom-color: #00adb5;
+}
+
+.sectionTitle {
+  margin-bottom: 30px;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+}
+.coursesGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  display: grid;
+}
+@media (width<=991px) {
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.courseCard {
+  border: 1px solid #e9eaf0;
+  border-radius: 63px;
+  overflow: hidden;
+}
+.courseImage {
+  object-fit: cover;
+  width: 100%;
+  height: 312px;
+}
+.categoryBadge {
+  color: #342f98;
+  text-transform: uppercase;
+  background-color: #ebebff;
+  margin: 16px;
+  padding: 6px 8px;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+.courseTitle {
+  color: #1d2026;
+  margin-bottom: 16px;
+  padding: 0 16px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.divider {
+  background-color: #e9eaf0;
+  height: 1px;
+  margin: 16px 0;
+}
+.progress {
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+.progressText {
+  color: #4e5566;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+
+.badgesSection {
+  flex: 1;
+}
+.badgesTitle {
+  color: #1d2026;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.courseSection {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badgeRow {
+  gap: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.paginationContainer {
+  justify-content: space-between;
+  align-items: center;
+  width: 122px;
+  height: 31px;
+  display: flex;
+}
+@media (width<=991px) {
+  .paginationContainer {
+    width: 100px;
+    height: 26px;
+  }
+}
+@media (width<=640px) {
+  .paginationContainer {
+    width: 90px;
+    height: 24px;
+  }
+}
+.arrowLeft {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.arrowLeft:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pageNumber {
+  color: #1d2026;
+  letter-spacing: -0.01em;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (width<=991px) {
+  .pageNumber {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+}
+@media (width<=640px) {
+  .pageNumber {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+.arrowRight {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.arrowRight:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination {
+  justify-content: space-between;
+  align-items: center;
+  width: 176px;
+  height: 48px;
+  display: flex;
+  margin-top: 100px;
+}
+
+.pageNumberPagination {
+  color: #1d2026;
+  letter-spacing: -0.01em;
+  background-color: #00adb5;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (width<=991px) {
+  .pageNumberPagination {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+}
+@media (width<=640px) {
+  .pageNumberPagination {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+.headerBackground {
+  width: 100%;
+  background-color: #c9f1ff;
+  opacity: 0.5;
+  height: 280px;
+}
+
+.section {
+  position: relative;
+  padding: 36px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 30px;
+  top: -238px;
+  width: 1320px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1.25rem; /* 5px */
+  justify-content: flex-end;
+  margin-top: 2.5rem; /* 10px */
+}
+
+@media (max-width: 640px) {
+  .buttonContainer {
+    flex-direction: column;
+  }
+}
+
+.resetButton {
+  padding: 0 30px;
+  height: 48px;
+  font-weight: 600;
+  color: #00adb5;
+  background-color: #c9f1ff;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .resetButton {
+    width: 100%;
+  }
+}
+
+.saveButton {
+  padding: 0 30px;
+  height: 48px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00adb5;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .saveButton {
+    width: 100%;
+  }
+}
